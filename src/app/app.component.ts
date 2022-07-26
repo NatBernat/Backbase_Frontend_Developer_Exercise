@@ -8,6 +8,7 @@ import { getRequest } from 'src/utils/getRequest';
 })
 export class AppComponent {
   title = 'Weather app';
-  place = { lat: 41.3879, lon: 2.16992 };
-  data: any = getRequest(this.place);
+  message = 'fetch error';
+  firstPlace = { lat: 41.3879, lon: 2.16992 };
+  firstPlaceData: any = getRequest(this.firstPlace);
 }
