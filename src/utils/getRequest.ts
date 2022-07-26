@@ -8,7 +8,8 @@ export const getRequest = async ({ lat, lon }: Place) => {
 
     const endpoint = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
 
-    const data: any = await axios.get(endpoint);
+    const { data } = await axios.get(endpoint);
+    console.log(data.name);
 
     return data;
   } catch (error) {

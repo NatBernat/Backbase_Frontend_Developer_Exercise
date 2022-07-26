@@ -2,7 +2,8 @@
   <h1>{{ title }}</h1>
   <p>Actual weather data from the following places:</p>
   <section>
-    <h2>City: {{ data.name }}</h2>
-    <p>Weather: {{ data.weather.main }}</p>
+    <p>{{ firstPlaceData | json }}</p>
+    <h2>City: {{ firstPlaceData.name }}</h2>
+    <p>Weather: {{ firstPlaceData.weather.main }}</p>
   </section>
 </div>
